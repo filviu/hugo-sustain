@@ -1,3 +1,7 @@
+.social-links i {
+  font-size: 1.6em;
+}
+
 /* Main page with stikky-footer */
 html, body {
   height: 100%;
