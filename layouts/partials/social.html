@@ -1,11 +1,19 @@
 <div class="social">
   <ul class="social-links">
     {{ if .Site.Params.Social.Github }}
-      <li><a href="https://github.com/{{ .Site.Params.Social.Github }}"><i class="fab fa-github"></i></a></li>
+      <li><a href="{{ .Site.Params.Social.Blog }}"><i class="fas fa-blog" ></i></a></li>
+    {{ end }}
+
+    {{ if .Site.Params.Social.Github }}
+      <li><a href="https://github.com/{{ .Site.Params.Social.Github }}"><i class="fab fa-github" ></i></a></li>
     {{ end }}
 
     {{ if .Site.Params.Social.Gitlab }}
         <li><a href="https://gitlab.com/{{ .Site.Params.Social.Gitlab }}"><i class="fab fa-gitlab"></i></a></li>
+    {{ end }}
+
+    {{ if .Site.Params.Social.Mastodon }}
+      <li><a class="button-square button-social hint--top" rel="me" data-hint="Mastodon" title="Mastodon" href="https://{{ index (split .Site.Params.Social.Mastodon "@") 2 }}/@{{ index (split .Site.Params.Social.Mastodon "@") 1 }}"><i class="fab fa-mastodon"></i></a></li>
     {{ end }}
 
     {{ if .Site.Params.Social.Email }}
@@ -38,6 +46,10 @@
 
     {{ if .Site.Params.Social.Medium }}
       <li><a href="https://medium.com/@{{ .Site.Params.Social.Medium }}"><i class="fab fa-medium"></i></a></li>
+    {{ end }}
+
+    {{ if .Site.Params.Social.RSS }}
+      <li><a href="{{ .Site.Params.Social.RSS }}"><i class="fa fa-rss"></i></a></li>
     {{ end }}
 
   </ul>
